@@ -1,17 +1,55 @@
-5<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dienstenboekje Zoeker</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        input { padding: 10px; font-size: 16px; }
-        button { padding: 10px; font-size: 16px; cursor: pointer; }
-        #result { margin-top: 20px; padding: 20px; border: 1px solid #ccc; display: none; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid black; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 50px; 
+            font-size: 16px;
+        }
+        input, button {
+            padding: 10px; 
+            font-size: 16px; 
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            display: none;
+        }
+        table {
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        /* Dynamisch aanpassen voor kleinere schermen */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            table {
+                font-size: 12px;
+            }
+            input, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
