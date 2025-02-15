@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dienstenboekje Zoeker</title>
+    <title>Dienstenboekje Den Helder Zoeker</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
             text-align: center; 
-            margin: 50px; 
+            margin: 20px; 
             font-size: 16px;
         }
         input, button {
@@ -22,15 +22,20 @@
             border: 1px solid #ccc; 
             display: none;
         }
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
         table {
             width: 100%; 
             border-collapse: collapse; 
             margin-top: 20px; 
             font-size: 14px;
+            min-width: 600px;
         }
         th, td {
             border: 1px solid black; 
-            padding: 8px; 
+            padding: 6px; 
             text-align: left;
         }
         th {
@@ -42,12 +47,18 @@
             body {
                 font-size: 14px;
             }
+            .table-container {
+                overflow-x: auto;
+            }
             table {
                 font-size: 12px;
             }
             input, button {
                 font-size: 14px;
                 padding: 8px;
+            }
+            th, td {
+                padding: 4px;
             }
         }
     </style>
@@ -58,7 +69,7 @@
     <input type="text" id="dienstnummer" placeholder="Bijv. 2101">
     <button onclick="zoekDienst()">Zoeken</button>
     
-    <div id="result"></div>
+    <div id="result" class="table-container"></div>
 
     <script>
         const diensten = {
