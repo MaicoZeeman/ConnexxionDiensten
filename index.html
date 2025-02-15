@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dienstenboekje Den Helder Zoeker</title>
+    <title>Dienstenboekje Zoeker</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
             text-align: center; 
-            margin: 20px; 
-            font-size: 16px;
+            margin: 10px; 
+            font-size: 14px;
         }
         input, button {
-            padding: 10px; 
-            font-size: 16px; 
+            padding: 8px; 
+            font-size: 14px; 
             cursor: pointer;
         }
         #result {
-            margin-top: 20px; 
-            padding: 20px; 
+            margin-top: 10px; 
+            padding: 10px; 
             border: 1px solid #ccc; 
             display: none;
         }
@@ -29,13 +29,13 @@
         table {
             width: 100%; 
             border-collapse: collapse; 
-            margin-top: 20px; 
-            font-size: 14px;
-            min-width: 600px;
+            margin-top: 10px; 
+            font-size: 12px;
+            min-width: 400px;
         }
         th, td {
             border: 1px solid black; 
-            padding: 6px; 
+            padding: 4px; 
             text-align: left;
         }
         th {
@@ -45,26 +45,27 @@
         /* Dynamisch aanpassen voor kleinere schermen */
         @media (max-width: 600px) {
             body {
-                font-size: 14px;
+                font-size: 12px;
             }
             .table-container {
                 overflow-x: auto;
             }
             table {
-                font-size: 12px;
+                font-size: 10px;
+                min-width: 300px;
             }
             input, button {
-                font-size: 14px;
-                padding: 8px;
+                font-size: 12px;
+                padding: 6px;
             }
             th, td {
-                padding: 4px;
+                padding: 2px;
             }
         }
     </style>
 </head>
 <body>
-    <h2>Dienstenboekje Zoeken</h2>
+    <h2>Dienstenboekje Den Helder Zoeken</h2>
     <p>Voer een dienstnummer in:</p>
     <input type="text" id="dienstnummer" placeholder="Bijv. 2101">
     <button onclick="zoekDienst()">Zoeken</button>
